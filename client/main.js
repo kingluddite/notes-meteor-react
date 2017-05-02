@@ -3,6 +3,8 @@ import { Session } from 'meteor/session';
 import { Tracker } from 'meteor/tracker';
 import ReactDOM from 'react-dom';
 
+import './../imports/api/notes';
+
 import { routes, onAuthChange } from './../imports/routes/routes';
 import './../imports/startup/simple-schema-configuration.js';
 
