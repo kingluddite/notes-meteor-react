@@ -3,10 +3,10 @@ import React from 'react';
 import Header from './Header';
 import NoteList from './NoteList';
 
-export default () => {
+export default Dashboard = () => {
       return (
         <div>
-          <Header title="Your Links" />
+          <Header title="Dashboard" />
           <div className="page-content">
             <NoteList />
           </div>
