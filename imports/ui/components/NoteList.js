@@ -2,6 +2,7 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import { Session } from 'meteor/session';
 
 import { Notes } from './../../api/notes';
 
@@ -31,6 +32,7 @@ NoteList.propTypes = {
 
 
 export default createContainer(() => {
+  const selectedNoteId = Session.get('selectedNoteId');
   // 1. subscribe to the subscription (we set up in notes.js)
   Meteor.subscribe('notes');
 
@@ -38,6 +40,11 @@ export default createContainer(() => {
   return {
      // keys in here end up being props on Component
      // we need to access our API to get access to notes so we import it up top
-     notes: Notes.find().fetch()
+     notes: Notes.find().fetch().map((note) => {
+       return {
+         ...note,
+         selected: note._id === selectedNoteId
+       };
+     })
   };
 }, NoteList );
