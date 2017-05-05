@@ -33,14 +33,14 @@ NoteList.propTypes = {
 
 export default createContainer(() => {
   const selectedNoteId = Session.get('selectedNoteId');
-  // 1. subscribe to the subscription (we set up in notes.js)
+
   Meteor.subscribe('notes');
 
-  // we want to fetch the notes from here
   return {
-     // keys in here end up being props on Component
-     // we need to access our API to get access to notes so we import it up top
-     notes: Notes.find().fetch().map((note) => {
+
+     notes: Notes.find({}, {
+       sort: { updatedAt: -1 }
+     }).fetch().map((note) => {
        return {
          ...note,
          selected: note._id === selectedNoteId
