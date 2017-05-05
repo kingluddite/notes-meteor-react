@@ -15,12 +15,7 @@ const onLeaveNotePage = () => {
 };
 
 const onEnterNotePage = (nextState) => {
-  if (!Meteor.userId()) {
-    browserHistory.replace('/');
-  } else {
-    // console.log(nextState);
     Session.set('selectedNoteId', nextState.params.id);
-  }
 };
 
 export const onAuthChange = (isAuthenticated, currentPagePrivacy) => {
