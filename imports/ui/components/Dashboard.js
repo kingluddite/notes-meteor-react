@@ -7,7 +7,7 @@ import Editor from './Editor';
 export default Dashboard = () => {
       return (
         <div>
-          <Header title="Dashboard" />
+          <Header title="Notes" />
           <div className="page-content">
             <aside className="page-content__sidebar">
               <NoteList />
