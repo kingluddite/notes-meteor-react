@@ -47,9 +47,7 @@ $button-default-color: $dark-grey;
 $button-default-border-color: $grey;
 
 // Item
-$item-bg: $light-grey;
-$item-border: darken($item-bg, 8%);
-$item-text-color: $dark-grey;
+$item-border-width: 4px;
 
 // Page Content
 $page-content-sidebar-width: 30rem;
