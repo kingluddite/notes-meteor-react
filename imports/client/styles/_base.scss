@@ -1,10 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 62.5%;
 }
 
 body {
+  color: $body-default-color;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: $base-font-size;
+  background-color: $body-bg-color;
 }
 
 h1 {
@@ -23,7 +29,7 @@ p {
 }
 
 a {
-  color: #000000;
+  color: $body-default-color;
 }
 
 [type=text],

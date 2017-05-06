@@ -9,8 +9,12 @@ export default Dashboard = () => {
         <div>
           <Header title="Dashboard" />
           <div className="page-content">
-            <NoteList />
-            <Editor />
+            <aside className="page-content__sidebar">
+              <NoteList />
+            </aside>
+            <main className="page-content__main">
+              <Editor />
+            </main>
           </div>
         </div>
       );
