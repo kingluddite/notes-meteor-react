@@ -8,14 +8,17 @@ $dark-grey: #777777;
 // Body
 $body-bg-color: #fafafa;
 $body-default-color: #333333;
+$body-default-font-family: Helvetica, Arial, sans-serif;
 
 // Spacing
 $space: 1.4rem;
+$large-space: 2.8rem; // add this
 $site-max-width: 100rem;
 
 // Font sizes
 $base-font-size: 1.4rem;
-$large-font-size: 1.8rem;
+// $large-font-size: 1.8rem; // old
+$large-font-size: 2.2rem; // new
 
 // Header
 $header-bg: $brand-primary;

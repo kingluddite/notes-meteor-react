@@ -1,14 +1,15 @@
 .page-content {
   display: flex;
-  height: $page-content-height; // add this line
+  height: $page-content-height;
   max-width: $site-max-width;
   margin: 0 auto;
-  padding: $space;
+  padding: $large-space $space;
 }
 
 .page-content__sidebar {
-  display: flex; // add this line
+  display: flex;
   width: $page-content-sidebar-width;
+  padding-right: $large-space;
 }
 
 .page-content__main {
